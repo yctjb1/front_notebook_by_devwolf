@@ -1,4 +1,1 @@
-# AptanaStudioRORdemo1
-初识git
-
-看ror教程说要搞个github就来试试了
+测试一些sourcefree的功能，以及手动输入一些git语法
