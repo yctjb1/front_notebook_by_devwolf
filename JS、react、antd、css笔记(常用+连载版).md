@@ -225,7 +225,7 @@ zh-Hans-CN是简体中文的排序规则，sensotivity 是灵敏度，包括 bas
 MDN介绍：https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 #### (12)moment生成给人看的时间，与moment对象生成时间戳以及时间戳变回时间
-
+```
 let time1 = moment(new Date()).format('YYYY-MM-DD HH:mm:ss');//生成给人看的时间
 let time2 = moment(new Date(), 'YYYY-MM-DD HH:mm:ss');//生成moment时间对象
 let timeNumber = moment(new Date(), 'YYYY-MM-DD HH:mm:ss').valueOf();//先生成moment时间对象再生成时间戳
@@ -234,6 +234,7 @@ let time3 = moment(new Date(Number(item.stopTime))).format('YYYY-MM-DD HH:mm:ss'
 let time3 = moment(Number(1573455094000)).format('YYYY-MM-DD HH:mm:ss')//直接时间戳不加new Date也行
 
 直接转换 moment ( timeString,'YYYY-MM-DD HH:mm:ss')
+```
 
 #### (12.5)原生js的Date生成给人看的时间以及生成时间戳和时间戳变回时间
 
