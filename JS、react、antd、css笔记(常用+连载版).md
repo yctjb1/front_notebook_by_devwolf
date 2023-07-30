@@ -225,6 +225,9 @@ zh-Hans-CN是简体中文的排序规则，sensotivity 是灵敏度，包括 bas
 MDN介绍：https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 #### (12)moment生成给人看的时间，与moment对象生成时间戳以及时间戳变回时间
+
+**[20230730补充]moment.js官方已不推荐，现在替换为`dayjs`，原生表示当前毫秒时间戳可以使用Date.now()**
+
 ```
 let time1 = moment(new Date()).format('YYYY-MM-DD HH:mm:ss');//生成给人看的时间
 let time2 = moment(new Date(), 'YYYY-MM-DD HH:mm:ss');//生成moment时间对象
@@ -512,6 +515,8 @@ console.log(result);
 
 #### (22)moment拓展知识(比如隔了多少个月/天)
 
+
+
 获取当天0点0时0分的数据————加个.startOf('day')，如果是23:59:59则是*endOf*
 
 获取月初的数据————加个.startOf('month')
@@ -669,6 +674,8 @@ if(a?.b){
 
 ### (26) some函数检测是否至少一个元素通过测试
 
+**[20230730补充]忘了哪里提到的了，说是不推荐使用some函数？什么可读性有歧义啥的**
+
 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/some
 
 有一个目标数组`["apple","banana","orange"]` ，我想检查其他数组是否包含任何目标数组元素。
@@ -748,6 +755,8 @@ arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue]
 for...of遍历的是可迭代对象iterable,无法遍历对象，特别的，可以用for...in去遍历对象
 
 如上，获取键名可以Object.keys( )或者for...in
+
+**mdn的建议：**`for ... in`是为遍历对象属性而构建的，不建议与数组一起使用
 
 ### (30) js中的const
 
